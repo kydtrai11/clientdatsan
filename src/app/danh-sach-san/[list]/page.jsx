@@ -71,7 +71,7 @@ const page = () => {
                                             Số 2 Phạm Văn Đồng
                                         </div>
                                         <div className='text-center mt-25 mb-15 '>
-                                            <a href='/' className=' bg-blue-bold px-15 py-10 rounded-5 text-white  '>
+                                            <a href='/chi-tiet/1' className=' bg-blue-bold px-15 py-10 rounded-5 text-white  '>
                                                 Chi tiết
                                             </a>
                                         </div>

@@ -48,8 +48,26 @@ const Header = () => {
                     <div className='text-yellow h-[50px] flex items-center px-15 border-x  '>
                         <a href="/">Trang chủ</a>
                     </div>
-                    <div className='hover:text-yellow h-[50px] flex items-center px-15  '>
-                        <button href="/">Danh sách sân bãi </button>
+                    <div className='hover:text-yellow h-[50px] flex items-center px-15 relative group  '>
+                        <button className='' href="/">Danh sách sân bãi </button>
+                        <ul className=' hidden group-hover:block absolute top-[50px] left-0 py-10 w-[150px] rounded-10 bg-white text-[#566985] shadow-cart '>
+                            <li className='px-10 py-10 hover:text-yellow '>
+                                <a href='/danh-sach-san/1' className=''>
+                                    Bóng đá
+                                </a>
+                            </li>
+                            <li className='px-10 py-10 hover:text-yellow '>
+                                <a href='/danh-sach-san/1' className=''>
+                                    Bóng đá
+                                </a>
+                            </li>
+                            <li className='px-10 py-10 hover:text-yellow '>
+                                <a href='/danh-sach-san/1' className=''>
+                                    Bóng đá
+                                </a>
+                            </li>
+
+                        </ul>
                     </div>
                     {
                         menu.map((item, index) => {
