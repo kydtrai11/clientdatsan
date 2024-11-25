@@ -9,6 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "border": 'rgba(0, 0, 0, .21)',
         "blue-bold": "#18458b",
         "yellow": "#f9b90f",
         "hover-yellow": "#3aaced",

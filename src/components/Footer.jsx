@@ -6,14 +6,14 @@ const Footer = () => {
             <div className='bg-blue-bold text-white'>
                 <div className='lg:container lg:flex px-15 lg:px-0 py-[40px] '>
                     <div className='py-10 lg mr-20 lg:w-1/3  '>
-                        <h3 className='pb-25 mb-30 border-b font-[500] uppercase '>
+                        <h3 className='pb-25 mb-30 border-b border-border font-[500] uppercase '>
                             Giới thiệu
                         </h3>
                         <p className='mb-20 '>
                             Đặt sân 247 cung cấp các tiện ích thông minh giúp cho bạn tìm sân bãi và đặt sân một
                             cách hiệu quả nhất.
                         </p>
-                        <ul className='text-[13px] pb-15 mb-20 border-b '>
+                        <ul className='text-[13px] pb-15 mb-20 border-b border-border '>
                             <li className='py-10 '>
                                 Chính sách bảo mật
                             </li>
@@ -29,7 +29,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className='py-10  mr-20 lg:w-1/3  '>
-                        <h3 className='pb-25 mb-30 border-b font-[500] uppercase '>
+                        <h3 className='pb-25 mb-30 border-b border-border font-[500] uppercase '>
                             Thông tin
                         </h3>
                         <ul className='text-[13px] '>
@@ -55,7 +55,7 @@ const Footer = () => {
 
                     </div>
                     <div className='py-10 lg:w-1/3  '>
-                        <h3 className='pb-25 mb-30 border-b font-[500] uppercase '>
+                        <h3 className='pb-25 mb-30 border-b border-border font-[500] uppercase '>
                             Liên hệ
                         </h3>
                         <div className='text-[13px]  p-15 bg-[rgba(0,0,0,.04)] shadow-cart '>

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react'
 import { FaStar } from "react-icons/fa";
 
@@ -61,8 +62,8 @@ const page = () => {
                                             <Image src={"/san.jpg"} alt='img' width={200} height={200} className='w-full' />
                                         </div>
                                         <div className='mt-10'>
-                                            <a className='text-[18px] text-[#183c7d] font-[500]' href="/"> Sân Ulis
-                                            </a>
+                                            <Link className='text-[18px] text-[#183c7d] font-[500]' href="/"> Sân Ulis
+                                            </Link>
                                         </div>
                                         <div className='py-10 '>
                                             <span>0978210895 - Anh Linh</span>
@@ -71,9 +72,9 @@ const page = () => {
                                             Số 2 Phạm Văn Đồng
                                         </div>
                                         <div className='text-center mt-25 mb-15 '>
-                                            <a href='/chi-tiet/1' className=' bg-blue-bold px-15 py-10 rounded-5 text-white  '>
+                                            <Link href='/chi-tiet/1' className=' bg-blue-bold px-15 py-10 rounded-5 text-white  '>
                                                 Chi tiết
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
