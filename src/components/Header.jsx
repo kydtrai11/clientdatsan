@@ -24,6 +24,16 @@ const Header = () => {
         },
     ]
     const [open, setOpen] = useState(false)
+    const [showRegisterModal, setShowRegisterModal] = useState(false);
+    const [showLoginModal, setShowLoginModal] = useState(false); // New state for login modal
+
+    const toggleRegisterModal = () => {
+        setShowRegisterModal(!showRegisterModal);
+    };
+
+    const toggleLoginModal = () => {
+        setShowLoginModal(!showLoginModal); // Toggle login modal
+    };
     return (
         <div className='bg-blue-bold text-white '>
             <div className=' border-b border-border'>
@@ -31,7 +41,7 @@ const Header = () => {
                     <Image src={"/logo.png"} alt='logo' width={204} height={60} />
                     <div className='hidden lg:flex bg-yellow hover:bg-hover-yellow px-[30px] items-center'>
                         <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeXrIOxYh1OFi5kZNF5nZiA8-6r92zLjUU-nT05bBTBTyZXUQ/viewform">
-                            Chăm sóc khách hàng
+                            0247.303.0247
                         </Link>
                     </div>
                 </div>
@@ -46,24 +56,18 @@ const Header = () => {
                         <Link href="/">Trang chủ</Link>
                     </div>
                     <div className='hover:text-yellow h-[50px] flex items-center px-15 relative group uppercase  '>
-                        <button className='' href="/">Danh sách sân bãi </button>
+                        <button className='' href="/">Danh sách sân bóng </button>
                         <ul className=' hidden group-hover:block absolute top-[50px] left-0 py-10 w-[150px] rounded-10 bg-white text-[#566985] shadow-cart '>
                             <li className='px-10 py-10 hover:text-yellow '>
                                 <Link href='/danh-sach-san/1' className=''>
-                                    Bóng đá
+                                    Sân 5 người
                                 </Link>
                             </li>
                             <li className='px-10 py-10 hover:text-yellow '>
                                 <Link href='/danh-sach-san/1' className=''>
-                                    Bóng đá
+                                    Sân 7 người
                                 </Link>
                             </li>
-                            <li className='px-10 py-10 hover:text-yellow '>
-                                <Link href='/danh-sach-san/1' className=''>
-                                    Bóng đá
-                                </Link>
-                            </li>
-
                         </ul>
                     </div>
                     {
@@ -78,10 +82,10 @@ const Header = () => {
                 </div>
 
                 <div className='flex border-r border-border  px-15 uppercase'>
-                    <button className='mr-15 uppercase'>
+                    <button className='mr-15 uppercase' onClick={toggleRegisterModal}>
                         Đăng ký
                     </button>
-                    <button className='uppercase'>
+                    <button className='uppercase' onClick={toggleLoginModal}>
                         Đăng nhập
                     </button>
                 </div>
@@ -91,6 +95,67 @@ const Header = () => {
                 </button>
 
             </div>
+            {showRegisterModal && (
+                <div className='modal-overlay fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center'>
+                    <div className='bg-white p-10 rounded-10 w-[80%] max-w-md'>
+                        <h2 className="text-xl font-bold mb-4 ">Đăng ký</h2>
+                        <form>
+                            <input
+                                type="text"
+                                placeholder="Họ và tên"
+                                className="w-full mb-20 p-10 outline-none border border-gray-300 rounded"
+                            />
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                className="w-full mb-20 p-10 outline-none border border-gray-300 rounded"
+                            />
+                            <input
+                                type="password"
+                                placeholder="Mật khẩu"
+                                className="w-full mb-20 p-10 outline-none border border-gray-300 rounded"
+                            />
+                            <button type="submit" className="bg-blue-bold text-white px-5 py-10 rounded-5 w-full">
+                                Đăng ký
+                            </button>
+                        </form>
+                        <button
+                            className="mt-20 bg-gray-300 text-black px-5 py-10 rounded-5"
+                            onClick={toggleRegisterModal}
+                        >
+                            Đóng
+                        </button>
+                    </div>
+                </div>
+            )}
+            {showLoginModal && (
+                <div className='modal-overlay fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center'>
+                    <div className='bg-white p-10 rounded-10 w-[80%] max-w-md'>
+                        <h2 className="text-xl font-bold mb-4">Đăng nhập</h2>
+                        <form>
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                className="w-full mb-20 p-10 outline-none border border-gray-300 rounded"
+                            />
+                            <input
+                                type="password"
+                                placeholder="Mật khẩu"
+                                className="w-full mb-20 p-10 outline-none border border-gray-300 rounded"
+                            />
+                            <button type="submit" className="bg-blue-bold text-white px-5 py-10 rounded-5 w-full">
+                                Đăng nhập
+                            </button>
+                        </form>
+                        <button
+                            className="mt-20 bg-gray-300 text-black px-5 py-10 rounded-5"
+                            onClick={toggleLoginModal}
+                        >
+                            Đóng
+                        </button>
+                    </div>
+                </div>
+            )}
             {
                 open &&
                 <div className='bg-white px-20 py-10  '>
@@ -100,10 +165,10 @@ const Header = () => {
                                 Lọc theo loại sân
                             </option>
                             <option value={""}>
-                                Bóng đá
+                                Sân 5 người
                             </option>
                             <option value={""}>
-                                Pickleball
+                                Sân 7 người
                             </option>
                         </select>
                         <input type="text" placeholder='Nhập tên sân hoặc địa chỉ để tìm kiếm...'

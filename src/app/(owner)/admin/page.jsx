@@ -20,7 +20,6 @@ const Page = () => {
     //         return router.push("/kim-login")
     //     }
     // }
-
     const menuSideBar = [
         {
             name: "Loại sân bãi",
@@ -38,22 +37,6 @@ const Page = () => {
             name: "thông tin khách hàng",
             component: (<InforUser key={4} />)
         },
-        // {
-        //     name: "BÁO LỖI",
-        //     component: (<ErrorAdmin admin={admin} axiosJwt={axiosJwt} />)
-        // },
-        // {
-        //     name: "CATEGORY",
-        //     component: (<CategoryAdmin admin={admin} axiosJwt={axiosJwt} />)
-        // },
-        // {
-        //     name: "MANAGER CHAPTER",
-        //     component: (<ManageChapterAdmin admin={admin} axiosJwt={axiosJwt} />)
-        // },
-        // {
-        //     name: "UPLOAD COMIC",
-        //     component: (<ComicAdmin admin={admin} axiosJwt={axiosJwt} />)
-        // },
     ]
     return (
         <div>

@@ -65,40 +65,55 @@ const MenuYart = ({ admin, axiosJwt }) => {
     return (
         <div className='text-14 bg-gray-50 min-h-screen' >
             <h2 className='text-20 text-center  font-bold py-[30px] bg-blue-bold text-white  '>danh sách sân bãi</h2>
-            {
-                <div className="relative px-[100px] mt-25   sm:rounded-lg">
-                    <table className="w-full shadow-md text-[14px] text-left  text-gray-500 ">
-                        <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
-                            <tr>
-                                <th scope="col" className="px-20 py-15">
-                                    Mã Sân
-                                </th>
-                                <th scope="col" className="px-20 py-15">
-                                    Tên loại sân
-                                </th>
-                                <th scope="col" className="px-20 py-15">
-                                    Action
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
+            <div className="relative px-[100px] mt-25   sm:rounded-lg">
+                <table className="w-full shadow-md text-[14px] text-left  text-gray-500 ">
+                    <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
+                        <tr>
+                            <th scope="col" className="px-20 py-15">
+                                Mã Sân
+                            </th>
+                            <th scope="col" className="px-20 py-15">
+                                Tên loại sân
+                            </th>
+                            <th scope="col" className="px-20 py-15">
+                                Action
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                            <tr className="odd:bg-white  even:bg-gray-50  border-b ">
-                                <th scope="row" className="px-20 py-15 font-medium text-gray-900 whitespace-nowrap ">
-                                    001
-                                </th>
-                                <td className="px-20 py-15">
-                                    sân đá bóng
-                                </td>
-                                <td className="px-20 py-15">
-                                    <button className="font-bold text-red-500 hover:underline">XÓA</button>
-                                </td>
-                            </tr>
+                        <tr className="odd:bg-white  even:bg-gray-50  border-b ">
+                            <th scope="row" className="px-20 py-15 font-medium text-gray-900 whitespace-nowrap ">
+                                001
+                            </th>
+                            <td className="px-20 py-15">
+                                sân 5 người
+                            </td>
+                            <td className="px-20 py-15">
+                                <button className="font-bold text-red-500 hover:underline">XÓA</button>
+                                <button className="font-bold text-blue-bold  px-10 hover:underline uppercase ">sửa</button>
+                            </td>
+                        </tr>
 
-                        </tbody>
-                    </table>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <form class="max-w-sm mx-auto mt-[50px]">
+                <h3 className='text-center uppercase text-20 mb-20'>thêm loại sân bóng</h3>
+                <div class="mb-20">
+                    <label class="block  text-sm font-medium  mb-10 ">mã loại</label>
+                    <input class="bg-gray-50 border outline-none border-gray-300  text-sm rounded-lg block w-full p-2.5 focus:border-blue-500" placeholder="nhập mã loại..." required />
                 </div>
-            }
+                <div class="mb-20">
+                    <label class="block  text-sm font-medium  mb-10 ">tên loại</label>
+                    <input class="bg-gray-50 border outline-none border-gray-300  text-sm rounded-lg block w-full p-2.5 focus:border-blue-500" placeholder="nhập tên loại..." required />
+                </div>
+                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+            </form>
+
+
 
         </div>
 

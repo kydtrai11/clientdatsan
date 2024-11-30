@@ -52,8 +52,8 @@ const page = () => {
                         </p>
                     </div>
                 </div>
-                <div className='mt-20 lg:w-1/3 lg:mt-0  ' >
-                    <h4 className='text-[18px] text-[#f7373a] uppercase font-[500] py-15 lg:pt-0 hover:opacity-70 '>
+                <div className=' lg:w-1/3 lg:mt-0  ' >
+                    {/* <h4 className='text-[18px] text-[#f7373a] uppercase font-[500] py-15 lg:pt-0 hover:opacity-70 '>
                         Đặt sân ngay
                     </h4>
                     <p>
@@ -66,9 +66,9 @@ const page = () => {
                             <Image src={"/app-store.png"} alt='img' width={100} height={100} className=' w-full' />
                             <Image src={"/google-play.png"} alt='img' width={100} height={100} className=' w-full' />
                         </div>
-                    </div>
+                    </div> */}
                     <div className=''>
-                        <h4 className='text-[18px] my-20 uppercase font-[500] py-15 lg:pt-0 '>
+                        <h4 className='text-[18px] mb-5 uppercase font-[500] py-15 lg:pt-0 '>
                             Thông tin chủ sân
                         </h4>
                         <div className='shadow-cart p-15 '>
